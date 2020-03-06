@@ -1,5 +1,5 @@
-<?php require_once 'includes/init.php' ?>
-<?php require_once 'includes/header.php' ?>
+<?php require_once ('includes/init.php'); ?>
+<?php require_once ('includes/header.php'); ?>
 <?php if(!$session->is_signed_in()){redirect("login.php");}?>
             <!-- Top Menu Items -->
            <?php include "includes/top_nav.php"?>
