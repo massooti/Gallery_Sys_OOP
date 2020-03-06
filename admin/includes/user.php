@@ -15,13 +15,14 @@ class  User{
         global $database;
         $the_result_array=self::find_this_query("SELECT * FROM users WHERE id=$user_id LIMIT 1");
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
+//        return empty($the_result_array) ;
         return $found_user;
     }
 
     public static function find_this_query($sql){
       global $database;
         $result_set=$database->query($sql);
-        var_dump($result_set);
+//        var_dump($result_set);
         $the_object_array=array();
       while($row = mysqli_fetch_array($result_set)){
           $the_object_array[]= self::instatiation($row);
@@ -34,10 +35,10 @@ class  User{
         global $database;
         $username = $database-> escape_string($username);
         $password = $database-> escape_string($password);
-        $sql="SELECT * FROM users WHERE";
-        $sql .="username='{$username}'";
-        $sql .="AND password = '{$password}'";
-        $sql .="LIMIT 1";
+        $sql="SELECT * FROM users WHERE username='{$username}' AND password = '{$password}' LIMIT 1";
+//        $sql .=";
+//        $sql .="AND password = '{$password}'";
+//        $sql .="LIMIT 1";
         $the_result_array=self::find_this_query($sql);
         return !empty($the_result_array) ? array_shift($the_result_array) : false ;
     }

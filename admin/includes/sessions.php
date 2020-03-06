@@ -36,7 +36,6 @@ class Session{
             $this->user_id = $_SESSION['user_id'];
             $this->signed_in = true;
         }else{
-            return "Error";
             unset($this->user_id);
             $this->signed_in = false;
         }

@@ -14,18 +14,17 @@ class Database
     {
         $this->connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
         if ($this->connection->connect_errno) {
-            die('Database connect badly' . mysqli_errno());
+            die('Database connect badly' . mysqli_error());
         }
     }
 
     public function query($sql)
     {
         $result = mysqli_query($this->connection, $sql);
-
         return $result;
     }
 
-    public function confirm_query($result)
+    private function confirm_query($result)
     {
         if (!$result) {
             die('Query Failed');
