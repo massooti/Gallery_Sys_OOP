@@ -16,14 +16,17 @@
 //            $user=User::instatiation($find_user);
 //                        echo  $find_user['last_name'];
 
-            $user=User::find_user_by_id(3);
+            $user=User::find_user_by_id(8);
 
 //////            $R=$database->escape_string($users->lastName);
-//////            var_dump($users);
-////             $user=new User();
-            $user->lastName="Admin20000";
+////            var_dump($users);
+//             $user=new User();
+            $user->lastName="max1234";
+            $user->firstName="small4";
+            $user->username="Admin166676";
+            $user->password="1236544";
             $user->save();
-            echo $user->lastName;
+//            echo $user->lastName;
 ////            foreach ($users as $user){
 ////                echo $user->id . "<br>";
 ////            }
