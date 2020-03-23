@@ -8,7 +8,7 @@ class  User
     public $firstName;
     public $lastName;
 
-   public static function find_all_users()
+    public static function find_all_users()
     {
         global $database;
         return self::find_this_query("SELECT * FROM users");
@@ -73,6 +73,12 @@ class  User
         return array_key_exists($the_attribute, $object_properties);
     }
 
+    //abstraction & improvment
+    public function save()
+    {
+        return isset($this->id) ? $this->update() : $this->create();
+    }
+
     public function create()
     {
         global $database;
@@ -80,8 +86,8 @@ class  User
         $sql .= "VALUES ('";
         $sql .= $database->escape_string($this->username) . "', '";
         $sql .= $database->escape_string($this->password) . "', '";
-        $sql .= $database->escape_string($this->first_name) . "', '";
-        $sql .= $database->escape_string($this->last_name) . "')";
+        $sql .= $database->escape_string($this->firstName) . "', '";
+        $sql .= $database->escape_string($this->lastName) . "')";
 
         if ($database->query($sql)) {
             $this->id = $database->the_insert_id();
@@ -110,12 +116,12 @@ class  User
     {
         global $database;
 //        $sql="DELETE FROM users WHERE id=$id";
-        $sql= "DELETE FROM users ";
+        $sql = "DELETE FROM users ";
         $sql .= "WHERE id=" . $database->escape_string($this->id);
         $sql .= " LIMIT 1";
         $database->query($sql);
 
-        return(mysqli_affected_rows($database->connection)== 1) ? true : false;
+        return (mysqli_affected_rows($database->connection) == 1) ? true : false;
     }
 }
 
