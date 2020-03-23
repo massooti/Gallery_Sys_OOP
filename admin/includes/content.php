@@ -16,17 +16,17 @@
 //            $user=User::instatiation($find_user);
 //                        echo  $find_user['last_name'];
 //                        echo $find_user->lastName;
-            $users=User::find_user_by_id(2);
-//            $R=$database->escape_string($users->lastName);
-//            var_dump($users);
-            $users->username="zaeem";
-            $users->update();
-//            foreach ($users as $user){
-//                echo $user->id . "<br>";
-//            }
-////
-//            $the_pictures=new Picture();
-
+            $user=User::find_user_by_id(2);
+////            $R=$database->escape_string($users->lastName);
+////            var_dump($users);
+            $user->last_name="Admin1";
+            $user->update();
+////            foreach ($users as $user){
+////                echo $user->id . "<br>";
+////            }
+//////
+////            $the_pictures=new Picture();
+//            $user->delete();
             ?>
             <ol class="breadcrumb">
                 <li>

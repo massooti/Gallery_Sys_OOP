@@ -78,9 +78,9 @@ class  User
         global $database;
         $sql = "INSERT INTO users (username,password,first_name,last_name)";
         $sql .= "VALUES ('";
-        $sql .= $database->escape_string($this->username) . "','";
-        $sql .= $database->escape_string($this->password) . "','";
-        $sql .= $database->escape_string($this->first_name) . "','";
+        $sql .= $database->escape_string($this->username) . "', '";
+        $sql .= $database->escape_string($this->password) . "', '";
+        $sql .= $database->escape_string($this->first_name) . "', '";
         $sql .= $database->escape_string($this->last_name) . "')";
 
         if ($database->query($sql)) {
@@ -93,17 +93,29 @@ class  User
     public function update()
     {
         global $database;
-        $sql = "UPDATE users SET";
-        $sql .= "username='" . $database->escape_string($this->username) . "' ,";
-        $sql .= "password='" . $database->escape_string($this->password) . "' ,";
-        $sql .= "first_name='" . $database->escape_string($this->firstName) . "' ,";
-        $sql .= "last_name='" . $database->escape_string($this->lastName) . "' ";
-        $sql .= " WHERE id=" . $database->escape_string($this->id);
+        $sql = "UPDATE users SET ";
+        $sql .= "username= '" . $database->escape_string($this->username) . "' ,";
+        $sql .= "password= '" . $database->escape_string($this->password) . "' ,";
+        $sql .= "first_name= '" . $database->escape_string($this->firstName) . "' ,";
+        $sql .= "last_name= '" . $database->escape_string($this->lastName) . "' ";
+        $sql .= " WHERE id= " . $database->escape_string($this->id);
 //        $sql = "UPDATE users SET username='$database->escape_string($this->username)',password='$database->escape_string($this->password)',first_name='$database->escape_string($this->firstName)',last_name='$database->escape_string($this->lastName)' WHERE id= '$database->escape_string($this->id)'";
 
         $database->query($sql);
 //        return "1";
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+    }
+
+    public function delete()
+    {
+        global $database;
+//        $sql="DELETE FROM users WHERE id=$id";
+        $sql= "DELETE FROM users ";
+        $sql .= "WHERE id=" . $database->escape_string($this->id);
+        $sql .= " LIMIT 1";
+        $database->query($sql);
+
+        return(mysqli_affected_rows($database->connection)== 1) ? true : false;
     }
 }
 
