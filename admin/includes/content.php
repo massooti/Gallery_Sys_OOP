@@ -12,11 +12,15 @@
 //            while($row=mysqli_fetch_array($result_set)){
 //                echo $row['first_name'] . ' ' . $row['last_name'] ."<br>";
 ////            }
-            $find_user=User::find_user_by_id(2);
+//            $find_user=User::find_user_by_id(2);
 //            $user=User::instatiation($find_user);
-//            //            echo  $find_user['first_name'];
-                        echo $find_user->id;
-//            $users=User::find_all_users();
+//                        echo  $find_user['last_name'];
+//                        echo $find_user->lastName;
+            $users=User::find_user_by_id(2);
+//            $R=$database->escape_string($users->lastName);
+//            var_dump($users);
+            $users->username="zaeem";
+            $users->update();
 //            foreach ($users as $user){
 //                echo $user->id . "<br>";
 //            }

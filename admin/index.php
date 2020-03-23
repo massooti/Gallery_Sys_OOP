@@ -9,7 +9,7 @@
         </nav>
 
         <div id="page-wrapper">
-         <?php include "includes/content.php" ?>
+         <?php include ('includes/content.php'); ?>
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->

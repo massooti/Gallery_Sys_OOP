@@ -46,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/includes/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2201">
-              <caret line="71" column="50" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="50" />
+            <state relative-caret-position="443">
+              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
             </state>
           </provider>
         </entry>
@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/includes/content.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="412">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="26" />
               <folding>
                 <element signature="e#242#291#0#PHP" expanded="true" />
               </folding>
@@ -226,12 +226,12 @@
       <workItem from="1584286920397" duration="130000" />
       <workItem from="1584781711427" duration="2254000" />
       <workItem from="1584804702701" duration="7323000" />
-      <workItem from="1584864992214" duration="1257000" />
+      <workItem from="1584864992214" duration="1912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67019000" />
+    <option name="totallyTimeSpent" value="67674000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -440,15 +440,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/includes/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2201">
-          <caret line="71" column="50" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="50" />
+        <state relative-caret-position="443">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/includes/content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="412">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="26" />
           <folding>
             <element signature="e#242#291#0#PHP" expanded="true" />
           </folding>
