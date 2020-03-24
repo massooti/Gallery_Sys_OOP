@@ -3,6 +3,7 @@
 class  User
 {
     protected static $db_table="users";
+    protected static $db_table_fields=array('username','password','first_name','las_name');
     public $id;
     public $username;
     public $password;
@@ -54,11 +55,6 @@ class  User
     {
 
         $the_object = new self;
-//        $the_object->id        =$foundUser['id'];
-//        $the_object->username  =$foundUser['username'];
-//        $the_object->password  =$foundUser['password'];
-//        $the_object->firstName =$foundUser['first_name'];
-//        $the_object->lastName  =$foundUser['last_name'];
         foreach ($the_record as $the_attribute => $value) {
             if ($the_object->has_the_attribute($the_attribute)) {
                 $the_object->$the_attribute = $value;
@@ -75,7 +71,13 @@ class  User
     }
 
     protected function properties(){
-        return get_object_vars($this);
+        $properties=array();
+      foreach (self::$db_table_fields as $value=>$db_field){
+          if(property_exists($this,$db_field)){
+              $properties[$db_field]=$this->$db_field;
+          }
+      }
+        return $properties;
     }
 
     //abstraction & improvment
@@ -89,11 +91,8 @@ class  User
         global $database;
         $properties =$this->properties();
         $sql = "INSERT INTO " .self::$db_table. "(" .implode("," ,array_keys($properties)).")";
-        $sql .= "VALUES ('";
-        $sql .= $database->escape_string($this->username) . "', '";
-        $sql .= $database->escape_string($this->password) . "', '";
-        $sql .= $database->escape_string($this->firstName) . "', '";
-        $sql .= $database->escape_string($this->lastName) . "')";
+        $sql .= "VALUES ('". implode("','" ,array_values($properties))."')";
+
 
         if ($database->query($sql)) {
             $this->id = $database->the_insert_id();
