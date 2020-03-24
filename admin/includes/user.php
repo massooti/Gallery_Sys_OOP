@@ -3,7 +3,7 @@
 class  User
 {
     protected static $db_table="users";
-    protected static $db_table_fields=array('username','password','first_name','las_name');
+    protected static $db_table_fields=array('username','password','first_name','last_name');
     public $id;
     public $username;
     public $password;
@@ -80,6 +80,15 @@ class  User
         return $properties;
     }
 
+    protected function clean_properties(){
+        global  $database;
+        $clean_properties=array();
+        foreach ($this->properties() as $key=>$value){
+            $clean_properties[$key]= $database->escape_string($value);
+        }
+        return $clean_properties;
+    }
+
     //abstraction & improvment
     public function save()
     {
@@ -89,7 +98,7 @@ class  User
     public function create()
     {
         global $database;
-        $properties =$this->properties();
+        $properties =$this->clean_properties();
         $sql = "INSERT INTO " .self::$db_table. "(" .implode("," ,array_keys($properties)).")";
         $sql .= "VALUES ('". implode("','" ,array_values($properties))."')";
 
@@ -104,18 +113,15 @@ class  User
     public function update()
     {
         global $database;
-        $propertise=$this->properties();
+        $propertise=$this->clean_properties();
         $propertise_pairs=array();
         foreach($propertise as $key=>$value){
             $propertise_pairs[]="{$key}='{$value}'";
         }
-        $sql = "UPDATE " .self::$db_table. " SET ";
-        $sql .=implode(",", $propertise_pairs);
+        $sql = "UPDATE " .self::$db_table . " SET ";
+        $sql .=implode(", ", $propertise_pairs);
         $sql .= " WHERE id= " . $database->escape_string($this->id);
-//        $sql = "UPDATE users SET username='$database->escape_string($this->username)',password='$database->escape_string($this->password)',first_name='$database->escape_string($this->firstName)',last_name='$database->escape_string($this->lastName)' WHERE id= '$database->escape_string($this->id)'";
-
         $database->query($sql);
-//        return "1";
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
     }
 
