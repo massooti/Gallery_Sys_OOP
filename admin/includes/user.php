@@ -104,11 +104,13 @@ class  User
     public function update()
     {
         global $database;
+        $propertise=$this->properties();
+        $propertise_pairs=array();
+        foreach($propertise as $key=>$value){
+            $propertise_pairs[]="{$key}='{$value}'";
+        }
         $sql = "UPDATE " .self::$db_table. " SET ";
-        $sql .= "username= '" . $database->escape_string($this->username) . "' ,";
-        $sql .= "password= '" . $database->escape_string($this->password) . "' ,";
-        $sql .= "first_name= '" . $database->escape_string($this->firstName) . "' ,";
-        $sql .= "last_name= '" . $database->escape_string($this->lastName) . "' ";
+        $sql .=implode(",", $propertise_pairs);
         $sql .= " WHERE id= " . $database->escape_string($this->id);
 //        $sql = "UPDATE users SET username='$database->escape_string($this->username)',password='$database->escape_string($this->password)',first_name='$database->escape_string($this->firstName)',last_name='$database->escape_string($this->lastName)' WHERE id= '$database->escape_string($this->id)'";
 
