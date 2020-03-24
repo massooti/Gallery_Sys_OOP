@@ -74,6 +74,10 @@ class  User
         return array_key_exists($the_attribute, $object_properties);
     }
 
+    protected function properties(){
+        return get_object_vars($this);
+    }
+
     //abstraction & improvment
     public function save()
     {
@@ -83,7 +87,8 @@ class  User
     public function create()
     {
         global $database;
-        $sql = "INSERT INTO " .self::$db_table. "(username,password,first_name,last_name)";
+        $properties =$this->properties();
+        $sql = "INSERT INTO " .self::$db_table. "(" .implode("," ,array_keys($properties)).")";
         $sql .= "VALUES ('";
         $sql .= $database->escape_string($this->username) . "', '";
         $sql .= $database->escape_string($this->password) . "', '";
@@ -127,6 +132,5 @@ class  User
 }
 
 //010 Logion creation download
-//003 create methode query part2
 
 ?>
