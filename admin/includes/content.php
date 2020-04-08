@@ -21,10 +21,10 @@
 //////            $R=$database->escape_string($users->lastName);
 ////            var_dump($users);
              $user=new User();
-            $user->lastName="max55544445";
-            $user->firstName="sma444666";
             $user->username="Admi4444n06";
             $user->password="14444044";
+            $user->firstName="sma444666";
+            $user->lastName="max55544445";
             $user->save();
 //            echo $user->lastName;
 ////            foreach ($users as $user){

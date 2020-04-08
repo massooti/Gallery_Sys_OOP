@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3a528fb6-f806-4434-96eb-ab7896613350" name="laravel" url="http://laravel.fekristone.ir">
+        <fileTransfer host="laravel.fekristone.ir" port="21" rootFolder="/laravel">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="a62cefad-e03b-40b7-baba-d2a1f2bff7f3" name="drvahid" url="http://demo.drvahidzand.com/">
+        <fileTransfer host="demo.drvahidzand.com" port="21" rootFolder="/demo">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
