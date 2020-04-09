@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e9c4908-aa67-49d8-a9b4-62d75cdf3fa1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/includes/db_object.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/db_object.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/db_object.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/init.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/includes/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-682">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            <state relative-caret-position="124">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="39" />
               <folding>
                 <element signature="n#verify_user#0;n#User#0;n#!!top" />
                 <element signature="n#save#0;n#User#0;n#!!top" />
@@ -27,17 +28,34 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/includes/db_object.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+            <state relative-caret-position="186">
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
               <folding>
-                <element signature="n#find_all#0;n#Db_object#0;n#!!top" />
-                <element signature="n#find_by_id#0;n#Db_object#0;n#!!top" />
-                <element signature="n#find_this_query#0;n#Db_object#0;n#!!top" />
-                <element signature="n#instatiation#0;n#Db_object#0;n#!!top" />
                 <element signature="n#has_the_attribute#0;n#Db_object#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-127">
+              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/includes/content.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="31" column="76" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
+              <folding>
+                <element signature="e#242#291#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,11 +98,9 @@
         <option value="$PROJECT_DIR$/admin/includes/header.php" />
         <option value="$PROJECT_DIR$/admin/includes/top_nav.php" />
         <option value="$PROJECT_DIR$/admin/logout.php" />
-        <option value="$PROJECT_DIR$/admin/includes/init.php" />
         <option value="$PROJECT_DIR$/admin/login.php" />
         <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/admin/includes/database.php" />
-        <option value="$PROJECT_DIR$/admin/includes/content.php" />
         <option value="&lt;a62cefad-e03b-40b7-baba-d2a1f2bff7f3&gt;/local/resources/views/layout/layout.blade.php" />
         <option value="&lt;3a528fb6-f806-4434-96eb-ab7896613350&gt;/local/resources/views/User/Product/product-single.blade.php" />
         <option value="&lt;3a528fb6-f806-4434-96eb-ab7896613350&gt;/local/app/Http/Controllers/ProductsController.php" />
@@ -93,8 +109,10 @@
         <option value="&lt;3a528fb6-f806-4434-96eb-ab7896613350&gt;/local/app/Http/Controllers/ProductsCategoryController.php" />
         <option value="&lt;3a528fb6-f806-4434-96eb-ab7896613350&gt;/local/resources/views/User/Product/products.blade.php" />
         <option value="&lt;3a528fb6-f806-4434-96eb-ab7896613350&gt;/local/resources/views/Admin/Product/index.blade.php" />
-        <option value="$PROJECT_DIR$/admin/includes/db_object.php" />
         <option value="$PROJECT_DIR$/admin/includes/user.php" />
+        <option value="$PROJECT_DIR$/admin/includes/init.php" />
+        <option value="$PROJECT_DIR$/admin/includes/content.php" />
+        <option value="$PROJECT_DIR$/admin/includes/db_object.php" />
       </list>
     </option>
   </component>
@@ -109,7 +127,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,6 +149,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,12 +223,13 @@
       <workItem from="1585985151892" duration="2749000" />
       <workItem from="1586180882067" duration="3288000" />
       <workItem from="1586346162008" duration="6815000" />
-      <workItem from="1586364480885" duration="422000" />
+      <workItem from="1586364480885" duration="2034000" />
+      <workItem from="1586442816665" duration="1394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97614000" />
+    <option name="totallyTimeSpent" value="100620000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -225,7 +244,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13615733" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1376702" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Remote Host" order="3" weight="0.3880484" />
@@ -238,8 +257,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32885906" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32885906" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" visible="true" weight="0.05033557" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.09899329" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.19798657" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.15594855" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -249,6 +268,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa5068.28837/index.php" />
@@ -362,24 +407,10 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa4144.12310/index.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa4144.13895/connect.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa4144.5218/add.php" />
-    <entry file="file://$PROJECT_DIR$/admin/includes/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/includes/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -418,16 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="e#242#291#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-248">
@@ -435,27 +456,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/db_object.php">
+    <entry file="file://$PROJECT_DIR$/admin/includes/init.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="279">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-127">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="31" column="76" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
           <folding>
-            <element signature="n#find_all#0;n#Db_object#0;n#!!top" />
-            <element signature="n#find_by_id#0;n#Db_object#0;n#!!top" />
-            <element signature="n#find_this_query#0;n#Db_object#0;n#!!top" />
-            <element signature="n#instatiation#0;n#Db_object#0;n#!!top" />
-            <element signature="n#has_the_attribute#0;n#Db_object#0;n#!!top" />
+            <element signature="e#242#291#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/includes/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-682">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="124">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="39" />
           <folding>
             <element signature="n#verify_user#0;n#User#0;n#!!top" />
             <element signature="n#save#0;n#User#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/db_object.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding>
+            <element signature="n#has_the_attribute#0;n#Db_object#0;n#!!top" />
           </folding>
         </state>
       </provider>
