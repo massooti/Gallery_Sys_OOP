@@ -57,6 +57,19 @@ class Photo extends Db_object
             return false;
         }
         $target_path = SITE_ROOT . DS . 'admin' . DS . $this->upload_directory . DS . $this->filename;
+        if(file_exists($target_path)){
+            $this->errors[] = "This file {$this->filename} is already exists";
+            return false;
+        }
+        if(move_uploaded_file($this->tmp_path,$target_path)){
+            if($this->create()){
+                unset($this->tmp_path);
+                return true;
+            }
+        }else{
+            $this->errors[] = "The file directory probably does not exists";
+            return false;
+        }
     }
 }
 
