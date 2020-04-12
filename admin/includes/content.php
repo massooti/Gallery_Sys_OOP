@@ -20,11 +20,12 @@
 
 //////            $R=$database->escape_string($users->lastName);
 ////            var_dump($users);
-             $user=new User();
-            $user->username="Student";
-            $user->password="656666";
-            $user->firstName="sma444666";
-            $user->lastName="max55544445";
+             $user=new Photo();
+            $user->title="Student";
+            $user->filename="656666";
+            $user->description="sma444666";
+            $user->type="max55544445";
+            $user->size="max55544445";
             $user->save();
 //                                                $users=User::find_all();
 ////                                                    echo $user->lastName;
