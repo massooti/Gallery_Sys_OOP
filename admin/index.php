@@ -7,6 +7,7 @@
           <?php include "includes/sidebar.php" ?>
             <!-- /.navbar-collapse -->
         </nav>
+
         <div id="page-wrapper">
          <?php include ('includes/content.php'); ?>
             <!-- /.container-fluid -->
