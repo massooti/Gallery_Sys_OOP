@@ -44,7 +44,7 @@ class Photo extends Db_object
     }
 
     public function piture_path(){
-        return $this->upload_directory . DS . $this->filename;
+        return $this->upload_directory .'/'. $this->filename;
     }
 
     public function save(){

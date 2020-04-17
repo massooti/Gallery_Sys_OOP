@@ -40,11 +40,17 @@
                         <th>Size</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-center">
                     <?php foreach ($photos  as $key=> $photo): ?>
-                    <tr>
+                    <tr class="text-center">
                         <td><?php echo $key+1;?></td>
-                        <td><img src="<?php echo $photo->piture_path();?>" alt=""></td>
+                        <td><img src="<?php echo $photo->piture_path();?>" alt="" height="120px" width="120px">
+                        <div class="photo-links">
+                            <a href="delete_photo.php/?id=<?php echo $photo->photo_id ?>">Delete</a>
+                            <a href="delete_photo.php/?<?php $photo->photo_id ?>">Edit</a>
+                            <a href="delete_photo.php/?<?php $photo->photo_id ?>">View</a>
+                        </div>
+                        </td>
                         <td><?php echo $photo->photo_id ;?></td>
                         <td><?php echo  $photo->filename;?></td>
                         <td><?php echo  $photo->title;?></td>
