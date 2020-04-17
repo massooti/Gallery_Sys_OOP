@@ -8,10 +8,10 @@ class Db_object{
 
     }
 
-    public static function find_by_id($user_id)
+    public static function find_by_id($id)
     {
         global $database;
-        $the_result_array = static::find_by_query("SELECT * FROM ".static::$db_table." WHERE id=$user_id LIMIT 1");
+        $the_result_array = static::find_by_query("SELECT * FROM ".static::$db_table." WHERE id= $id LIMIT 1");
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
 //        return empty($the_result_array) ;
 //        return $found_user;
@@ -109,7 +109,7 @@ class Db_object{
     {
         global $database;
 //        $sql="DELETE FROM users WHERE id=$id";
-        $sql = "DELETE FROM users ";
+        $sql = "DELETE FROM " .static::$db_table ." ";
         $sql .= "WHERE id=" . $database->escape_string($this->id);
         $sql .= " LIMIT 1";
         $database->query($sql);

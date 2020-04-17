@@ -16,18 +16,10 @@
 //            $user=User::instatiation($find_user);
 //                        echo  $find_user['last_name'];
 
-//            $user=User::find_user_by_id(8);
 
-//////            $R=$database->escape_string($users->lastName);
-////            var_dump($users);
-//             $user=new Photo();
-//            $user->title="Student";
-//            $user->filename="656666";
-//            $user->description="sma444666";
-//            $user->type="max55544445";
-//            $user->size="max55544445";
-//            $user->save();
             echo INCLUDES_PATH;
+            $user=User::find_by_id(8);
+            echo $user->username;
 //                                                $users=User::find_all();
 ////                                                    echo $user->lastName;
 //                                                    foreach ($users as $user){

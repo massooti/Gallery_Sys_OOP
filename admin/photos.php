@@ -44,14 +44,14 @@
                     <?php foreach ($photos  as $key=> $photo): ?>
                     <tr class="text-center">
                         <td><?php echo $key+1;?></td>
-                        <td><img src="<?php echo $photo->piture_path();?>" alt="" height="120px" width="120px">
+                        <td><img src="<?php echo $photo->picture_path();?>" alt="" height="120px" width="120px">
                         <div class="photo-links">
-                            <a href="delete_photo.php/?id=<?php echo $photo->photo_id ?>">Delete</a>
-                            <a href="delete_photo.php/?<?php $photo->photo_id ?>">Edit</a>
-                            <a href="delete_photo.php/?<?php $photo->photo_id ?>">View</a>
+                            <a href="delete_photo.php/?id=<?php echo $photo->id ?>">Delete</a>
+                            <a href="delete_photo.php/?<?php $photo->id ?>">Edit</a>
+                            <a href="delete_photo.php/?<?php $photo->id ?>">View</a>
                         </div>
                         </td>
-                        <td><?php echo $photo->photo_id ;?></td>
+                        <td><?php echo $photo->id ;?></td>
                         <td><?php echo  $photo->filename;?></td>
                         <td><?php echo  $photo->title;?></td>
                         <td><?php echo  $photo->size;?></td>
