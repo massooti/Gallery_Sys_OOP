@@ -43,7 +43,7 @@ class Photo extends Db_object
         }
     }
 
-    public function picture_path(){
+    public function piture_path(){
         return $this->upload_directory .'/'. $this->filename;
     }
 
@@ -72,6 +72,16 @@ class Photo extends Db_object
             }
         }else{
             $this->errors[] = "The file directory probably does not exists";
+            return false;
+        }
+    }
+
+    public function delete_photo()
+    {
+        if($this->delete()){
+            $target_path = SITE_ROOT . DS . 'admin' . DS . $this->picture_path();
+            return unlink($target_path) ? true : false;
+        }else{
             return false;
         }
     }
